@@ -18,7 +18,8 @@
         "gulp-sass": "^4.1.0"
     },
     "dependencies": {
-        "browser-sync": "^2.26.14"
+        "browser-sync": "^2.26.14",
+        "gulp-sourcemaps": "^3.0.0"
     },
     "browserslist": [
         "Last 1 version",

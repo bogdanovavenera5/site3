@@ -1,3 +1,7 @@
+    *{
+        box-sizing: border-box;
+    }
+
 @media screen and (max-width: 1200px) {
     .header {
         display: flex;
@@ -23,26 +27,24 @@
     }
 }
 @media screen and (max-width: 991px) {
-    
+    .container {
+        margin: 0 auto}
     .promo { 
         min-height: 450px;
         background-position: -270px 0px;
         background-size: cover;
-
-
-    &__wrapper {
-        margin-right: 220px;
+        &__wrapper {
+            margin-right: 220px;
         } 
-    &__header {
-        font-size: 38px;
+        &__header {
+            font-size: 38px;
         } 
-    &__subheader {
-        font-size: 20px;  
+        &__subheader {
+            font-size: 20px;  
     } 
-    &__icons {
-        width: 410px;  
-    }      
-              
+        &__icons {
+            width: 410px;  
+    }                 
     .header {
         display: flex;
         justify-content: space-between;
@@ -61,19 +63,20 @@
     }   
    
     .button {
-         width: 230px;
-           
+         width: 230px;           
         } 
         }   
-    .tricks {            
+    .tricks { 
+        min-height: 100px;           
         padding: 40px 0 60px 0;     
         margin: 0 auto;    
         &__wrapper {
-            display: block;
+            display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;           
-            
+            margin-right: 0;
+            padding-right: 0;
         }    
         &__icons {
             display: flex;
@@ -82,87 +85,68 @@
             align-items: center;
         } 
         &__wrapper {
-            display: block;
+            display: flex;
             margin-top: 25px;
     }   
     .title {
         font-size: 25px;
         margin: 0 auto; 
         text-align: center; 
-    }
-       
+    }       
     }    
 }
 @media screen and (max-width: 576px) {
     .promo { 
         min-height: 350px;
-        background-position: -400px 0px;
+        background-position: -300px 0px;
         background-size: cover;
-
-
-    &__wrapper {
-        margin-right: 420px;
+        &__wrapper {
+            margin-right: 420px;
         } 
-    &__header {
-        font-size: 32px;
+        &__header {
+            font-size: 32px;
         } 
-    &__subheader {
-        font-size: 19px;  
-    } 
-    &__icons {
-        width: 410px;  
-    }      
-              
+        &__subheader {
+            font-size: 19px;  
+        }               
     .header {
-        display: flex;
-        justify-content: space-between;
-        width: 55%;
-        margin: 0 10px 0 20px;
-        &__logo {
-            display: flex;
-            width: 200px;    
-            }
+        width: 55%;       
         &__official {
-        position: absolute; 
-        top: 570px;
-        left: 20px;
+            position: absolute; 
+            top: 570px;
+            left: 20px;
         }
         &__phone {
            font-size: 16px; 
         }     
-    }    
+        }    
     .button_main {
         width: 220px;
         font-size: 14px;  
-        } 
-        }   
-    .tricks {            
-        padding: 40px 0 60px 0;     
-        margin: 0 auto;    
-        &__wrapper {
-            display: block;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;           
-            
-        }    
-        &__icons {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-        } 
-        &__wrapper {
-            display: block;
-            margin-top: 25px;
-    }   
+        }           
+    }
     .title {
         font-size: 22px;
         margin: 0 auto; 
         text-align: center; 
-    }
-       
-    }    
+    }   
 }
+    @media screen and (max-width: 576px)   {
+
+    .promo {
+        min-height: 250px;
+        background-position: -500px 0px;
+        background-size: cover; 
+        &__wrapper {
+            margin-right: 520px;
+                } 
+        &__header {
+            font-size: 22px;
+                } 
+        &__subheader {
+            font-size: 19px;  
+            }      
+        }   
+     }
 
 
