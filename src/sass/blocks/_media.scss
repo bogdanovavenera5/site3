@@ -1,0 +1,97 @@
+@media screen and (max-width: 1200px) {
+    .header {
+        display: flex;
+        justify-content: space-around;
+        &__logo {
+            width: 230px;    
+        }  
+    }
+    .promo {        
+        min-height: 550px;        
+        background-position: -210px 0px;
+        background-size: cover;
+        &__wrapper {
+            margin-right: 50px;
+        }
+    }
+    .tricks {      
+        padding: 58px 0 60px 0;
+
+        &__wrapper {
+            margin-right: 20px;  
+        } 
+    }
+}
+@media screen and (max-width: 991px) {
+    
+    .promo { 
+    min-height: 450px;
+    background-position: -270px 0px;
+    background-size: cover;
+
+
+    &__wrapper {
+        margin-right: 220px;
+        } 
+    &__header {
+        font-size: 38px;
+        } 
+    &__subheader {
+        font-size: 20px;  
+    } 
+    &__icons {
+        width: 410px;  
+    }      
+              
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+        margin: 0 10px 0 10px;
+        &__logo {
+            display: flex;
+            width: 200px;    
+            }
+        &__phone {
+           font-size: 16px; 
+        } 
+    .button { 
+        width: 140px;
+     } 
+    }
+   
+   
+    .button {
+         width: 230px;
+           
+        } 
+        }   
+    .tricks { 
+        min-height: ;     
+        padding: 40px 0 60px 0;     
+        margin: 0 auto;    
+        &__wrapper {
+            display: block;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;           
+            
+        }    
+        &__icons {
+            display: block;
+            justify-content: center;
+            flex-direction: column;
+        } 
+        &__wrapper {
+            display: block;
+            margin-top: 25px;
+    }   
+    .title {
+        font-size: 25px;
+        margin: 0 auto; 
+        text-align: center; 
+    }
+       
+    }    
+}
+
