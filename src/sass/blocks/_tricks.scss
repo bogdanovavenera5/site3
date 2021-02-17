@@ -3,7 +3,7 @@
     padding: 78px 0 70px 0; 
     &__wrapper {
         display: flex;       
-        justify-content: space-between;        
+        justify-content: center;
         margin-top: 66px;
         align-items: center;
         flex-direction: row;
@@ -18,7 +18,7 @@
         text-align: center;
         display: flex;
         flex-direction: column;
-        margin: 0 50px;
+        margin: 0 80px;
         }
     &__img {
         display: block;
