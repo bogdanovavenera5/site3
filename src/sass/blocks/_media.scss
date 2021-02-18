@@ -274,8 +274,7 @@
 			margin-top: 10px; 
 		}
 		&__subheader {
-			font-size: 18px;
-			margin-top: 0px;
+			margin-top: 0;
 			font-size: 14px;		
 		}  
 		&__link {
@@ -296,8 +295,8 @@
 		 
 		.header {
 			margin-right: 5px;
-			margin-left: 5px ;
-			padding: 0px;		
+			margin-left: 5px;
+			padding: 0;
 			&__phone {
 				font-size: 13px;		
 			}
@@ -329,17 +328,21 @@
 		}
 	}
 	.consultation {
-		.consultation__descr {
-			margin-left: 30px;
-			font-size: 18px;
-			margin-top: 40px;
-		}			
-		.title {
-			&_left {					
+		$parent: &;
+		& .container {
+			#{$parent}__descr {				
 				margin-left: 30px;
-				font-size: 20px;
-			}	
+				font-size: 14px;
+				margin-top: 40px;
+			}
+			.title {
+				&_left {
+					margin-left: 30px;
+					font-size: 20px;
+				}
+			}
 		}
+
 	}
 }
 
