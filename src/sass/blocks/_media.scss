@@ -16,7 +16,6 @@
 	
 	
 }
-
 @media screen and (max-width: 1600px) {
 	.promo {
 		.container {
@@ -29,7 +28,6 @@
 		}
 	}
 	
-
 
 	.tricks {
 		padding: 58px 0 60px 0;
@@ -102,7 +100,8 @@
 			}	
 		}
 					
-	}	
+	}
+	
 	
 }
 
@@ -150,7 +149,7 @@
 		.button {
 			width: 230px;
 		}
-}
+    }
 	.tricks {
 		min-height: 100px;
 		padding: 40px 0 60px 0;
@@ -214,8 +213,10 @@
 				font-size: 28px;
 			}	
 		}
-	}	
+	}
+	
 }
+	
 @media screen and (max-width: 767px) {
 	.promo {
 		min-height: 350px;
@@ -259,7 +260,9 @@
 			}
 		}
 	}
+	
 }
+	
 @media screen and (max-width: 576px) {
 	.promo {
 		min-height: 250px;
@@ -291,8 +294,7 @@
 			display: flex;
 			justify-content: center;
 			width: 300px;
-		 }
-		 
+		}
 		.header {
 			margin-right: 5px;
 			margin-left: 5px;
@@ -342,7 +344,7 @@
 				}
 			}
 		}
-
+			   
 	}
+	
 }
-
