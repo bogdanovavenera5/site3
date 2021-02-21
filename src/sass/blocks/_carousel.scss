@@ -56,5 +56,20 @@
         right: -66px;
         left: auto;              
     }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 16px 0;
+        list-style: none;
+        bottom: 40px;
+        line-height: none;
+
+    }
+    .slick-dots li {
+        margin: 0 0.25rem;
+        background: rgb(46, 10, 10);
+        border-radius: 50%;
+    }
     
 }
