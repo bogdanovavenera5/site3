@@ -18,7 +18,11 @@
 			max-width: 1100px;
 		}
 	}
-	
+	.feed {
+		.container {
+			max-width: 1100px;
+		}
+	}
 }
 @media screen and (max-width: 1600px) {
 	.promo {
@@ -36,6 +40,12 @@
 			max-width: 1100px;
 		}
 	}
+	.feed {
+		.container {
+			max-width: 1100px;
+		}
+	}
+
 
 	.tricks {
 		padding: 58px 0 60px 0;
@@ -115,7 +125,14 @@
 			max-width: 1100px;
 		}
 	}
-	
+	.feed {
+		padding: 0  40px;
+		
+		.container {
+			max-width: 1100px;
+		}
+
+	}
 }
 
 @media screen and (max-width: 991px) {
@@ -228,6 +245,7 @@
 		}
 	}
 	.catalog { 
+		padding-bottom: 40px;
 		.container {
 			max-width: 800px;
 		}	
@@ -237,10 +255,19 @@
 			font-size: 16px;
 			line-height: 40px;
 			margin-top: 60px;
+			
 
 		}
 		&__content {
 			justify-content: space-around;
+		}
+	}
+	.feed {
+		.container {
+			max-width: 800px;
+		}
+		&__item {
+			margin-top: 40px;
 		}
 	}
 }
@@ -293,6 +320,20 @@
 			margin-top: 40px;			
 		}
 		
+	}
+	.feed {
+		&__item {				
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+						
+		}
+		&__img {
+			margin-right: 0;	
+		}
+		&__text {
+			text-align: center;
+		}
 	}
 	
 }
@@ -350,6 +391,8 @@
 				width: 125px;				
 			}  
 		} 
+	
+			
 	}
 	.tricks {
 		.title {
@@ -392,6 +435,18 @@
 		}
 		&__tab {
 			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	}
+	.feed {
+		.title {
+			font-size: 20px;
+		}
+		&__descr {
+			text-align: left;
+		}
+		&__img {
+			margin-bottom: 30px;
 		}
 	}
 }
