@@ -282,6 +282,7 @@
 			width: 350px;
 			height: 220px;
 			padding: 30px 20px 30px 20px;
+			left: 75%;
 		}
 		&__addr {
 		margin-bottom: 25px;
@@ -363,6 +364,7 @@
 			width: 300px;
 			height: 190px;
 			padding: 30px 20px 30px 20px;
+	
 		}
 		&__addr {
 		margin-bottom: 20px;
@@ -373,6 +375,25 @@
 			font-size: 16px;
 		}		
 	}
+	.modal {		
+		width: 300px;
+		min-height: 350px;
+		input {
+			width: 220px;
+			min-height: 45px;	
+		}
+		.button {
+			display: block;
+			align-items: center;
+			width: 220px;
+			font-size: 14px;
+			height: 40px;
+		}
+		.feed-form {
+			margin-top: 5px;
+		}	
+	}
+
 	
 }
 	
@@ -494,6 +515,7 @@
 			height: 140px;
 			padding: 15px 10px 15px 10px;
 			border-radius: 5px;
+			left: 42%;
 		}
 		&__addr {
 			margin-bottom: 15px;
@@ -510,6 +532,23 @@
 				height: 20px;
 			}
 		}
-	}					
+	}
+	.modal {
+		padding: 20px;		
+		width: 240px;
+		min-height: 320px;
+		input {
+			width: 210px;
+			min-height: 40px;	
+		}
+		.button {
+			display: block;
+			align-items: center;
+			width: 210px;
+			font-size: 14px;
+			height: 40px;
+			font-size: 14px;
+		}
+	}	
 }   
 
