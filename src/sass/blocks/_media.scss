@@ -138,6 +138,7 @@
 			width: 420px;
 			height: 250px;
 			padding: 40px 50px 50px 50px;
+			left: 75%;
 		}
 	}
 }
@@ -285,8 +286,8 @@
 			left: 75%;
 		}
 		&__addr {
-		margin-bottom: 25px;
-		font-size: 18px;	
+			margin-bottom: 25px;
+			font-size: 18px;	
 		}
 		&__phone {
 			margin-bottom: 25px;
@@ -364,11 +365,12 @@
 			width: 300px;
 			height: 190px;
 			padding: 30px 20px 30px 20px;
-	
+			left: 25%;
+			margin-top: 120px;
 		}
 		&__addr {
-		margin-bottom: 20px;
-		font-size: 16px;	
+			margin-bottom: 20px;
+			font-size: 16px;	
 		}
 		&__phone {
 			margin-bottom: 20px;
@@ -549,6 +551,12 @@
 			height: 40px;
 			font-size: 14px;
 		}
+		&__close {
+			font-size: 31px;
+			right: -30px;
+			line-height: 18px;
+		}
 	}	
+
 }   
 
