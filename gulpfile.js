@@ -12,7 +12,7 @@ gulp.task('server', function() {
 
     browserSync({
         server: {
-            baseDir: "src"
+            baseDir: "dist"
         }
     });
 
@@ -33,9 +33,9 @@ gulp.task('styles', function() {
 
 gulp.task('watch', function() {
     gulp.watch("src/sass/**/**/*.+(scss|sass|css)", gulp.parallel('styles'));
-})
-
-gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
+    gulp.watch("src/*.html").on('change', gulp.parallel('html'));
+});   
+   
 
 gulp.task('html', function () {
     return gulp.src("src/*.html")
