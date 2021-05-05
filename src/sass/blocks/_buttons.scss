@@ -7,13 +7,21 @@
     font-size: 12px;    
     font-weight: 500;
     text-transform: uppercase;
-    color: #ffffff;   
+    color: #ffffff;
+    cursor: pointer;
+    transition: .3s all;
+    &:hover {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, $main_color 100%);
+    }    
+    &:focus {
+        outline: none;
+    }   
 
-    &_main {
+    &__main {
         margin-top: 67px;
         width: 300px;
         height: 50px;       
-        font-size: 16px;       
+        font-size: 16px;     
     }
     &_submit {       
         width: 100%;     

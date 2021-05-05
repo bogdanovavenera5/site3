@@ -3,33 +3,38 @@
     &__inner {
         position: relative;
         margin: 0 auto;
+        @media screen and (min-width: 320px) {
+            width: 250px;
+        }         
         @media screen and (min-width: 576px) {
+            width: 300px;
+        }
+        @media screen and (min-width: 768px) {
             width: 450px;
         }
-        @media screen and (min-width: 767px) {
+        @media screen and (min-width: 991px) {
             width: 550px;
         }
-        @media screen and (min-width: 991px) {
-            width: 850px;
-        }
         @media screen and (min-width: 1200px) {
-            width: 750px;
+            width: 550px;
         }
-
         .slick-list {
             .slick-track {
-                .slick-slide {
+                .slick-slide { 
+                    @media screen and (min-width: 320px) {
+                        width: 250px;
+                    }                   
                     @media screen and (min-width: 576px) {
+                        width: 300px;
+                    }
+                    @media screen and (min-width: 768px) {
                         width: 450px;
                     }
-                    @media screen and (min-width: 767px) {
+                    @media screen and (min-width: 991px) {
                         width: 550px;
                     }
-                    @media screen and (min-width: 991px) {
-                        width: 850px;
-                    }
                     @media screen and (min-width: 1200px) {
-                        width: 750px;
+                        width: 550px;
                     }
                     img  {
                         object-fit: fill;
@@ -40,11 +45,12 @@
             }
         }
     }
+    
     .slick-prev,.slick-next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        left: -66px;
+        left: -106px;
         border: none;
         background-color: #fff;
         img {
@@ -53,23 +59,45 @@
         }
     }
     .slick-next {       
-        right: -66px;
+        right: -106px;
         left: auto;              
     }
     .slick-dots {
         display: flex;
         justify-content: center;
-        margin: 0;
-        padding: 16px 0;
-        list-style: none;
-        bottom: 40px;
-        line-height: none;
-
+        justify-content: center;
+        margin: 0;           
     }
-    .slick-dots li {
-        margin: 0 0.25rem;
-        background: rgb(46, 10, 10);
-        border-radius: 50%;
+    .slick-dots li {       
+        list-style: none;
+        margin: 0px 10px;
+        &:nth-child(4) {
+            margin-right: 0;
+        }  
+    } 
+    .slick-dots button {
+        margin: 0 auto;
+        font-size: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 15px;
+        height: 15px;
+        border: 2px solid $main-color;      
+        border-radius: 50%;      
+        &:active,&:focus {outline: none; }
+    } 
+    
+    .slick-dots li.slick-active button {
+        background-color: transparent;
+        border: 1px solid $main-color;
+        background-color:  $main-color;
+        &:hover {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, $main_color 100%);
+      
+        }      
+    }
+    ul.slick-dots {
+       padding: 0; 
     }
     
 }

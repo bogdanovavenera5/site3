@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    justify-content: space-between;    
+    justify-content:space-between;    
     align-items: center;
     &__logo {
         width: 250px; 
@@ -24,7 +24,7 @@
         font-weight: 700;
         color: #ffffff;
         &:hover {
-            color: #fff;
+            color: $main-color;
             text-decoration: none;
         }   
     } 

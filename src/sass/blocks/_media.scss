@@ -1,87 +1,47 @@
 *{
 	box-sizing: border-box;
 }
-
-@media screen and (min-width: 1601px) {
-	.promo {
-		.container {
-			max-width: 1100px;
+@media screen and (max-width: 1200px) {
+	.container {
+        width: 950px;
+    }
+	.header {
+		display: flex;
+		justify-content: space-between;
+		&__logo {
+			width: 200px;
 		}
-	}
-	.consultation {
-		.container {
-			max-width: 1100px;
+		&__phone {
+			font-size: 16px;
 		}
-	}
-	.catalog {
-		.container {
-			max-width: 1100px;
-		}
-	}
-	.feed {
-		.container {
-			max-width: 1100px;
-		}
-	}
-}
-@media screen and (max-width: 1600px) {
-	.promo {
-		.container {
-			max-width: 1100px;
-		}
-	}
-	.consultation {
-		.container {
-			max-width: 1100px;
-		}
-	}
-	.catalog {
-		.container {
-			max-width: 1100px;
-		}
-	}
-	.feed {
-		.container {
-			max-width: 1100px;
-		}
-	}
-
-
-	.tricks {
-		padding: 58px 0 60px 0;
-		$parent: &;
-		& .container {
-			#{$parent}__wrapper {
-				margin-right: unset;
-				#{$parent}__icons {
-					#{$parent}__icon {
-						margin: 0 60px;
-					}
-				}
+		&__offisial {
+			span {
+				font-size: 16px;
 			}
 		}
 	}
-}
-
-
-@media screen and (max-width: 1200px) {
-	.header {
-		display: flex;
-		justify-content: space-around;
-		&__logo {
-			width: 230px;
-		}
-	}
 	.promo {
-		min-height: 550px;
-		background-position: -210px 0px;
-		background-size: cover;
+		min-height: 550px;		
 		.container {
 			max-width: 1000px;
 		}
 		&__wrapper {
-			margin-right: 50px;
+			margin-right: 30px;			
 		}
+		&__header {			
+			font-size: 38px; 
+		}
+		&__subheader {		
+			font-size: 22px; 
+		}		
+
+		.button {
+			width: 140px;
+			&__main {
+				width: 270px;
+				height: 45px;			
+			}
+		}		
 	}
 	.tricks {
 		padding: 58px 0 60px 0;
@@ -90,6 +50,7 @@
 			#{$parent}__wrapper {
 				margin-right: unset;
 				#{$parent}__icons {
+					margin-top: 40px;
 					#{$parent}__icon {
 						margin: 0 40px;
 					}
@@ -107,30 +68,124 @@
 			width: 250px;
 			input {
 				width: 250px;
+				height: 45px;
+				margin-bottom: 10px;
+			}
+			.button {
+				height: 45px;
+				margin-bottom: 10px;
+			}
+			.error {
+				font-size: 16px;
+				margin-bottom: 10px;
 			}	
 		}		
-		.container {
-			max-width: 1000px;
-		}
+		
 		.title {
 			&_left {					
 			margin-left: 70px;
 			font-size: 30px;
 			}	
-		}
-					
+		}					
 	}
 	.catalog {
-		.container {
-			max-width: 1100px;
+		padding: 0 0 50px 0 ;
+		.title {
+			font-size: 26px;
+		}
+		&__tabs {
+			margin-top: 40px;
+		} 
+		&__tab {
+			width: 200px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 16px;
+		}
+		&__content {
+			margin-top: 40px;
+			min-height: 400px;
+			
+		}
+		&-item {
+			width: 290px;
+			min-height: 400px;
+			margin:  18px 0;
+			&__img {
+				height: 140px;
+			}
+			
+			&__subtitle {
+				margin-top: 18px;
+			}
+			&__descr {
+				margin-top: 15px;
+			}
+			&__link {
+				margin-top: 16px;
+			}
+			hr {
+				margin-top: 14px;
+				margin-bottom: 18px;
+			}
+			&__price {
+				font-size: 18px;
+
+			}
+			&__list {
+				li {
+				margin-bottom: 10px;
+			}		
+			}
+			.button {
+				width: 110px;
+				height: 35px;
+				font-size: 13px;
+			}
+		}
+		.modal {
+			&__close {
+				font-size: 30px;
+				right: -30px;					
+			}		
+	 		
+			input {
+				height: 30px;
+				margin-bottom: 20px;
+			}
+						
+		}
+	}	
+	.carousel {
+		padding:  50px 0;
+		.slick-prev {			
+			left: -106px;			
+			img {
+				width: 28px;
+				height: 45px;
+			}
+		}
+		.slick-next {       
+			right: -106px;
+			left: auto;
+			img {
+				width: 28px;
+				height: 45px;
+			}              
 		}
 	}
 	.feed {
-		padding: 0  40px;
-		
-		.container {
-			max-width: 1100px;
+		&__item {
+			margin-top: 30px;
 		}
+		&__img {
+			width: 160px;
+			height: 160px;
+			margin-top: 20px;
+		}
+		.title {
+			font-size: 25px;
+		}	
 
 	}
 	.footer {
@@ -139,55 +194,350 @@
 			height: 250px;
 			padding: 40px 50px 50px 50px;
 			left: 75%;
+			transition: .3s all;
+		}
+	}
+	.modal {
+		padding: 25px 20px;
+		width: 340px;
+		min-height: 300px;
+		&__close {
+			font-size: 35px;
+			right: -35px;
+		}
+		&__subtitle {
+			font-size: 16px;
+		}
+		&__descr {
+			font-size: 12px;
+		}
+	 	.feed-form_mt25 {
+			 margin: 0 auto;
+			 padding-top: 10px;
+			 input {
+				height: 40px;
+				width: 250px;
+				margin: 0 auto;
+				margin-bottom: 20px;			
+			}
+			.button {
+				height: 40px;
+				width: 250px;
+				font-size: 14px;
+				margin: 0 auto;
+			}
+			label.error {
+				font-size: 14px;
+				margin-bottom: 8px;
+				margin-top: 8px;	
+			}
 		}
 	}
 }
-
 @media screen and (max-width: 991px) {
 	.container {
-		margin: 0 auto
+		margin: 0 auto;
+		width: 720px;
+	}
+	.header {
+		display: flex;
+		justify-content: space-between;			
+		margin: 0 10px 0 10px;
+		&__logo {
+			display: flex;
+			width: 200px;
+		}
+		&__phone {
+			font-size: 16px;
+		}
+		.button {
+			width: 130px;
+		}
 	}
 	.promo {
-		min-height: 450px;
-		background-position: -270px 0px;
-		background-size: cover;
+		min-height: 450px;		
 		.container {
 			max-width: 800px;
 		}
-		&__wrapper {
-			//margin-right: 220px;
+		&__wrapper {			
 			margin-right: unset;
 		}
 		&__header {
-			font-size: 38px;
+			font-size: 32px;
+			margin-right: 10px;
 		}
 		&__subheader {
-			font-size: 20px;
+			font-size: 18px;
+			margin-right: 10px;
 		}
 		&__icons {
 			width: 410px;
+			margin-right: 10px;
 		}
-		.header {
-			display: flex;
-			justify-content: space-between;
-			//width: 75%;
-			margin: 0 10px 0 10px;
-			&__logo {
-				display: flex;
-				width: 200px;
-			}
-			&__phone {
-				font-size: 16px;
+		.button {
+			&__main {
+				width: 220px;
+				font-size: 14px;
+				margin-right: 10px;			
+			}	
+		} 
+    }
+	.tricks {
+		padding: 35px 0 20px 0;
+		.title {
+			font-size: 24px;
+		}
+		&__icons {
+			margin-top: 30px;
+		}
+		&__icon {
+			width: 200px;
+		}
+		&__title {
+			font-size: 16px;
+			margin-top: 20px;
+		}
+		&__descr {
+			font-size: 12px;
+			margin-top: 20px;
+		}		
+
+	}
+
+	.consultation {
+		.consultation__descr {
+			font-size: 24px;
+			margin-left: 70px;
+			
+		}
+		.feed-form {
+			margin-left: 70px;
+			width: 220px;
+			input {
+				width: 220px;
+				height: 40px;
+				margin-bottom: 20px;			
 			}
 			.button {
-				width: 140px;
+				font-size: 14px;
+				height: 40px;			
+				&__submit {
+					width: 220px;					
+				}
 			}
+			.error {
+				font-size: 14px;
+				line-height: 16px;
+			}					
+		}		
+		.container {
+			max-width: 800px;
 		}
+		.title {
+			&_left {					
+				margin-left: 70px;
+				font-size: 28px;
+			}	
+		}
+	}	
+	.catalog {
+		padding: 0 0 20px 0;
+		.title {
+			font-size: 24px;
+		}
+		&__tabs {
+			margin-top: 40px;
+		} 
+		&__tab {
+			width: 150px;
+			height: 40px;
+			line-height: 40px;
+			font-size: 14px;
+		}
+		&__content {
+			justify-content: space-evenly;
+			margin-top: 30px;
+			min-height: 400px;
+			
+		}
+		&-item {
+			width: 280px;
+			padding: 10px;			
+			&__img {
+				margin-top: 10px;
+				height: 130px;				
+			}
+			
+			&__subtitle {
+				margin-top: 16px;
+			}
+			&__descr {
+				margin-top: 15px;
+				font-size: 14px;
+				width: 270px;
+				margin-left: 0;
+			}
+			&__link {
+				margin-top: 18px;
+				font-size: 14px;
+			}
+			hr {
+				margin-top: 20px;
+			}
+
+		
+			&__price {
+				font-size: 18px;
+
+			}
+			&__list {
+				li {				
+				font-size: 14px;
+			}		
+			}
+			.button {			
+				height: 35px;
+				font-size: 14px;
+			}
+			&__back {
+				font-size: 14px;
+			}				
+		}
+	}	
+	.feed {
+		.container {
+			max-width: 800px;
+		}
+		&__item {
+			margin-top: 40px;
+		}
+		&__descr {
+			font-size: 15px;
+			transition: .3s all;
+		}
+		&__subtitle {
+			font-size: 16px;
+			transition: .3s all;
+		}
+		&__img {
+			width: 150px;
+			height: 150px;
+			margin-top: 20px;
+			transition: .3s all;
+		}
+	}
+	.footer {
+		&__info {
+			width: 350px;
+			height: 220px;
+			padding: 30px 20px 30px 20px;
+			left: 75%;
+			transition: .3s all;
+		}
+		&__addr {
+			margin-bottom: 25px;
+			font-size: 18px;	
+		}
+		&__phone {
+			margin-bottom: 25px;
+			font-size: 18px;
+		}		
+	}
+	.modal {
+		padding: 20px;
+		width: 300px;
+		min-height: 260px;
+		&__subtitle {
+			font-size: 16px;
+		}
+		&__descr {
+			font-size: 12px;
+		}
+	 	.feed-form_mt25 {
+			width: 260px;
+			margin: 0 auto;
+			input {
+				height: 30px;
+				width: 220px;
+				margin: 0 auto;
+				font-size: 12px;
+				margin-bottom: 20px;
+			}
+			.button {
+				height: 30px;
+				width: 220px;
+				font-size: 14px;
+				margin: 0 auto;
+			}
+			label.error {
+				font-size: 12px;
+				text-align: center;
+			}
+		}		
+	}
+	.pageup {
+		right: 30px;
+	}	
+}	
+@media screen and (max-width: 767px) {
+	.container {
+		width: 540px;
+	}
+	.header {
+		padding: 10px 0;
+		display: flex;
+		margin-left: 0;
+		margin-right: 0;
+		justify-content: space-between;
+		&__official {
+			display: none;
+		}
+		&__phone {
+			font-size: 16px;
+		}
+		.button {
+			width: 130px;
+		}			
+	}
+	.promo {
+		min-height: 350px;	
+		&__wrapper {
+			margin-right: 0;
+			display: flex;
+		}
+		&__header {
+			font-size: 32px;
+		}
+		&__subheader {
+			font-size: 19px;
+		}
+		&__descr {
+			font-size: 14px;
+			font-weight: 300;
+		}
+		&__icons {
+			margin: 0;
+			width: 400px;
+			display: flex;
+			flex-direction: row;
+			margin-right: 20px;
+
+		}		
 
 		.button {
-			width: 230px;
-		}
-    }
+			&__main {
+				width: 180px;
+				height: 35px;
+				font-size: 12px;
+			}
+		}		
+	}
+	.title {
+		font-size: 22px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
 	.tricks {
 		min-height: 100px;
 		padding: 40px 0 60px 0;
@@ -200,166 +550,166 @@
 			margin-right: 0;
 			padding-right: 0;
 		}
+		&__descr {
+			font-size: 14px;
+		}
+		&__img {
+			width: 50px;
+			height: 50px;
+		}
 		&__icons {
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
 			align-items: center;
-			&__icon {
-				margin: 0 20px;
-			}
 		}
+		&__icon {
+			margin: 0 20px;
+			width: 270px;
+
+		}
+		
 		&__wrapper {
 			display: flex;
 			margin-top: 25px;
 		}
 		.title {
-			font-size: 25px;
+			font-size: 20px;
 			margin: 0 auto;
 			text-align: center;
 		}
 	}
 	.consultation {
-
+		min-height: 580px;
 		.consultation__descr {
-			font-size: 24px;
-			margin-left: 70px;
-			
+			font-size: 20px;
 		}
-		.feed-form {
-			margin-left: 70px;
-			width: 200px;
-			input {
-				width: 200px;
-				height: 40px;			
-			}
-			.button {
-				font-size: 14px;
-				height: 40px;
-				&__submit {
-					width: 200px;
-					
-				}
-			}					
-		}		
-		.container {
-			max-width: 800px;
-		}
-		.title {
-			&_left {					
-				margin-left: 70px;
-				font-size: 28px;
-			}	
-		}
-	}
-	.catalog { 
-		padding-bottom: 40px;
-		.container {
-			max-width: 800px;
-		}	
-		&__tab {
-			width: 150px;
-			height: 40px;
-			font-size: 16px;
-			line-height: 40px;
-			margin-top: 60px;
-			
-
-		}
-		&__content {
-			justify-content: space-around;
-		}
-	}
-	.feed {
-		.container {
-			max-width: 800px;
-		}
-		&__item {
-			margin-top: 40px;
-		}
-	}
-	.footer {
-		&__info {
-			width: 350px;
-			height: 220px;
-			padding: 30px 20px 30px 20px;
-			left: 75%;
-		}
-		&__addr {
-			margin-bottom: 25px;
-			font-size: 18px;	
-		}
-		&__phone {
-			margin-bottom: 25px;
-			font-size: 18px;
-		}		
-	}
-	
-}
-	
-@media screen and (max-width: 767px) {
-	.promo {
-		min-height: 350px;
-		background-position: -300px 0px;
-		background-size: cover;
-		&__wrapper {
-			margin-right: 30px;
-		}
-		&__header {
-			font-size: 32px;
-		}
-		&__subheader {
-			font-size: 19px;
-		}
-		.header {
-			padding: 0 20px;
-			&__official {
-				position: absolute;
-				top: 570px;
-				left: 20px;
-			}
-			&__phone {
-				font-size: 16px;
-			}			
-		}
-		.button_main {
-			width: 220px;
-			font-size: 14px;
-		}
-	}
-	.title {
-		font-size: 22px;
-		margin: 0 auto;
-		text-align: center;
-	}
-	.consultation {
 		.title {
 			&_left {
-				font-size: 22px;
+				font-size: 20px;
 				text-align: left;				
 			}
 		}
+		.feed-form {
+			.button_submit {
+				height: 35px;
+				font-size: 12px;
+				margin-bottom: 8px;
+			}
+			input {
+				height: 35px;
+				font-size: 11px;
+				margin-bottom: 8px;
+			}
+			.error {
+				font-size: 13px;
+				margin-bottom: 8px;
+				line-height: 15px;
+
+			}
+		}			
 	}
 	.catalog {
-		&__tabs { 			
-			margin-top: 40px;			
+		padding: 0 0 20px 0;
+		.title {
+			font-size: 20px;
 		}
-		
-	}
+		&__tabs {
+			margin-top: 30px;
+		} 
+		&__tab {
+			width: 130px;
+			height: 35px;
+			line-height: 35px;
+			font-size: 13px;
+		}
+		&__content {
+			justify-content: space-evenly;
+			margin-top: 30px;
+			min-height: 400px;
+			
+		}
+		&-item {
+			width: 230px;
+			min-height: 210px;
+			padding: 10px;			
+			&__img {
+				margin-top: 5px;
+				height: 120px;				
+			}
+			
+			&__subtitle {
+				margin-top: 16px;
+			}
+			&__descr {
+				margin-top: 10px;
+				font-size: 12px;
+				width: 200px;
+				margin-left: 0;
+			}
+			&__link {
+				margin-top: 16px;
+				font-size: 12px;
+			}
+			&__old-price {
+				font-size: 12px;
+			}
+
+			&__price {
+				font-size: 14px;
+
+			}
+			&__list {
+				li {				
+				font-size: 12px;
+				margin-bottom: 7px;
+			}		
+			}
+			hr {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.button {			
+				height: 25px;
+				font-size: 12px;
+				width: 80px;
+			}
+			&__back {
+				font-size: 12px;
+			}				
+		}
+	}	
+	
 	.feed {
+		.title {
+			margin-top: 20px;
+			font-size: 20px;
+		}
 		&__item {				
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-						
+			margin-top: 10px;						
 		}
 		&__img {
-			margin-right: 0;	
+			margin-right: 0;
+			margin-bottom: 30px;
+			width: 140px;
+			height: 140px;	
+		}
+		&__subtitle {
+			font-size: 16px;
 		}
 		&__text {
 			text-align: center;
+			font-size: 12px;
+		}
+		&__descr {
+			font-size: 14px;
+			margin-bottom: 10px;
 		}
 	}
+	
 	.footer {
 		&__info {
 			width: 300px;
@@ -367,6 +717,7 @@
 			padding: 30px 20px 30px 20px;
 			left: 25%;
 			margin-top: 120px;
+			transition: .3s all;
 		}
 		&__addr {
 			margin-bottom: 20px;
@@ -379,145 +730,303 @@
 	}
 	.modal {		
 		width: 300px;
-		min-height: 350px;
+		min-height: 300px;
+		&__close {
+			font-size: 30px;
+			margin-right: 10px;
+		}
 		input {
 			width: 220px;
-			min-height: 45px;	
+			min-height: 30px;	
 		}
 		.button {
 			display: block;
 			align-items: center;
 			width: 220px;
 			font-size: 14px;
-			height: 40px;
+			height: 30px;
 		}
 		.feed-form {
 			margin-top: 5px;
 		}	
+	}	
+}	
+@media screen and (max-width: 567px) {
+	.container {
+		padding: 0 10px;
+		width: 100%;
 	}
-
-	
-}
-	
-@media screen and (max-width: 576px) {
+	.header {	
+		padding: 0;	
+		display: flex;
+		justify-content: space-between;
+		margin-right: 5px;
+		margin-left: 5px;		
+		&__phone {
+			font-size: 12px;		
+		}
+		&__logo {
+			width: 185px;
+			margin-right: 10px;
+		} 
+		&__official {
+			display: none;
+		}
+		.button {
+			cursor: none;
+			width: 115px;
+			font-size: 10px;
+			height: 25px;				
+		} 
+	} 
 	.promo {
-		min-height: 250px;
-		background-position: -400px 0px;
-		background-size: cover;		
+		min-height: 400px;		
 		&__wrapper {
 			margin-right: 10px;
-			margin-top: 40px;			
+			margin-top: 40px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;		
 		}
 		&__header {
-			font-size: 23px;
-			margin-top: 10px; 
+			display: flex;
+			margin: 0 auto;		
+			flex-direction: row;
+			font-size: 22px;		
+			margin-top: 10px;			 
 		}
-		&__subheader {
-			margin-top: 0;
-			font-size: 14px;		
+		&__subheader {			
+			margin: 0 auto;			
+			font-size: 14px;
+			text-align: center;		
 		}  
 		&__link {
 			font-size: 14px;
+			margin: 20px auto;
+			
 		}
 		&__icons {
-			margin-top: 20px;
-		}
-		.button_main {
-			width: 200px;
-			height: 35px;	
-		}				
-		&__icons{
+			width: 100%;
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
-			width: 300px;
+			align-items: center;	
+			margin-top: 20px;
+			margin: 0 auto;
 		}
-		.header {
-			margin-right: 5px;
-			margin-left: 5px;
-			padding: 0;
-			&__phone {
-				font-size: 13px;		
+		&__icon {
+			margin-top: 20px
+			img {
+				margin-bottom: 0;
 			}
-			&__logo {
-				width: 175px;
-			} 
-			&__official {
-				top: 520px;
-				span {
-					font-size: 16px;
-				}
+		}
+		
+		.button {
+			&__main {				
+				font-size: 12px;
+				margin:  40px auto;
+				margin-bottom: 0;
 			}
-			.button {
-				cursor: none;
-				width: 125px;				
-			}  
-		} 
-	
-			
+		}	
 	}
 	.tricks {
+		padding: 30px 0 25px 0;
 		.title {
-			font-size: 20px;
+			font-size: 16px;
 		}
 		&__title {
 			margin-top: 20px;
+			font-size: 14px;
 		}
 		&__img {
 			margin-top: 25px;
 			margin-bottom: 5px;
+			width: 40px;
+			height: 40px;
 		}
+		&__descr {
+			font-size: 12px;
+			margin-top: 15px;
+		}
+		&__wrapper {
+			margin-top: 10px;
+		}
+		&__icon {
+			width: 240px;
+		}
+		
 	}
 	.consultation {
+		min-height: 500px;
+		padding: 50px 0 35px 0;		
 		$parent: &;
 		& .container {
 			#{$parent}__descr {				
-				margin-left: 30px;
+				margin: 0 auto;
+				text-align: center;
 				font-size: 14px;
-				margin-top: 40px;
+				margin-top: 20px;
 			}
 			.title {
+				font-size: 14px;
+				
 				&_left {
-					margin-left: 30px;
-					font-size: 20px;
+					margin: 0 auto;
+					text-align: center;
+					font-size: 16px;
 				}
 			}
 		}
-			   
-	}
-	.carusel {
-		padding-bottom: 30px;
-	}
+		.feed-form {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			margin-top: 30px;		
+			.button_submit {
+				font-size: 12px;
+				height: 30px;
+				font-size: 12px;
+				width: 200px;
+				margin: 0 auto;
+			}			
+			input {				
+				width: 200px;
+				height: 30px;
+				font-size: 12px;
+				margin: 0 auto;
+				margin-bottom: 10px;
+			}		
+			label.error {
+				font-size: 12px;
+				text-align: center;
+			}			   
+		}		
+	}		
+	.carousel {			
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}		
+	
 	.catalog  {
-
+		padding: 0 0 20px 0;
 		&__tabs {
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
 		}
 		&__tab {
-			margin-top: 30px;
-			margin-bottom: 30px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}		
+		.title {
+			font-size: 16px;
 		}
-	}
+		&__tabs {
+			margin-top: 15px;
+		} 
+		&__tab {
+			width: 120px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 12px;
+		}
+		&__content {
+			
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			margin: 10px auto;			
+			min-height: 400px;			
+			
+		}
+		&-item {			
+			width: 230px;
+			min-height: 210px;
+			padding: 10px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+						
+			&__img {
+				margin-top: 5px;
+				height: 120px;				
+			}
+			
+			&__subtitle {
+				margin-top: 14px;
+				font-size: 14px;
+			}
+			&__descr {
+				margin: 0 auto;
+				margin-top: 10px;
+				font-size: 12px;
+				width: 180px;
+				
+			}
+			&__link {
+				margin-top: 16px;
+				font-size: 12px;
+			}
+			&__old-price {
+				font-size: 12px;
+			}
+
+			&__price {
+				font-size: 14px;
+
+			}
+			&__list {
+				li {				
+				font-size: 12px;
+				margin-bottom: 7px;
+			}		
+			}
+			hr {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.button {			
+				height: 25px;
+				font-size: 12px;
+				width: 80px;
+			}
+			&__back {
+				font-size: 12px;
+			}				
+		}
+	}	
 	.feed {
 		.title {
-			font-size: 20px;
+			margin-top: 0;
+			font-size: 16px;
 		}
-		&__descr {
-			text-align: left;
+		&__subtitle {
+			font-size: 14px;
+		}
+		&__descr {			
+			font-size: 12px;
 		}
 		&__img {
 			margin-bottom: 30px;
+			width: 130px;
+			height: 130px;
+		}
+		&__count {
+			font-size: 12px;
+		}
+	    &__item {
+			margin-top: 20px;
 		}
 	}
 	.footer {		
 		&__info {
-			margin-top: 70px;						
+			margin-top: 120px;						
 			width: 250px;
 			height: 140px;
 			padding: 15px 10px 15px 10px;
 			border-radius: 5px;
 			left: 42%;
+			transition: .3s all;
 		}
 		&__addr {
 			margin-bottom: 15px;
@@ -535,28 +1044,45 @@
 			}
 		}
 	}
-	.modal {
-		padding: 20px;		
-		width: 240px;
-		min-height: 320px;
-		input {
-			width: 210px;
-			min-height: 40px;	
-		}
-		.button {
-			display: block;
-			align-items: center;
-			width: 210px;
-			font-size: 14px;
-			height: 40px;
-			font-size: 14px;
-		}
+	.modal {		
+		width: 260px;
+		min-height: 300px;
 		&__close {
-			font-size: 31px;
-			right: -30px;
-			line-height: 18px;
+			font-size: 30px;
+			margin-right: 10px;
 		}
-	}	
-
-}   
-
+		&__subtitle {
+			font-size: 13px;
+		}
+		.feed-form_mt25 {
+			width: 220px;
+			margin: 0 auto;
+			input {
+				width: 200px;
+				min-height: 30px;	
+			}
+			.button {
+				display: block;
+				align-items: center;
+				width: 200px;
+				font-size: 10px;
+				height: 30px;
+			}
+			label.error {
+				font-size: 12px;
+				text-align: center;
+			.feed-form {
+				margin-top: 5px;
+			}	
+			}		
+		}	
+	} 
+	.pageup {
+		right: 20px;
+		bottom: 30px;
+		img {		
+			width: 30px;
+			height: 30px;
+		}		
+	}
+}  

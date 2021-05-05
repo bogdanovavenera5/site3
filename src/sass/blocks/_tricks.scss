@@ -1,31 +1,26 @@
-.tricks 
-    {min-height: 470px;
-    padding: 78px 0 70px 0; 
-    &__wrapper {
-        display: flex;       
-        justify-content: center;
-        margin-top: 66px;
-        align-items: center;
-        flex-direction: row;
-    }
-    &__icons {        
-        text-align: center;
+.tricks {
+    min-height: 470px;
+    padding: 78px 0 70px 0;    
+    background-color: #f6f6f6; 
+   
+    &__icons { 
+      
         display: flex;
-        justify-content: space-between;
-        
+        justify-content: space-around;
+        margin-top: 66px;
     }       
     &__icon {
         width: 244px;
         text-align: center;
         display: flex;
-        flex-direction: column;
-        margin: 0 80px;
+        flex-direction: column;      
     }
     &__img {
         display: block;
         margin: 0 auto;
-        margin-bottom: 35px;    
-        }
+        margin-bottom: 20px;
+        margin-top: 20px;    
+    }
     &__title {
         margin-top: 37px;  
         font-size: 18px;            

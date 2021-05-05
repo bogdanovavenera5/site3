@@ -1,0 +1,44 @@
+.feed {
+   padding-bottom:0 487px 550px 70px;
+    &__title {
+        margin-bottom: 34px;
+        font-family: MuseoSansCyrl;
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #0d0d0d;
+    }
+    &__item {
+       display: flex;
+       margin-top: 70px;
+    }
+    &__img {
+        margin-bottom: 60px;
+        margin-right: 60px;
+        width: 169px;
+        height: 169px;
+        background-color: #0d0d0d;
+        border-radius: 84.5px;
+    } 
+    &__subtitle {              
+        font-size: 18px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #0d0d0d;
+    }
+    &__count { 
+        margin-top: 10px;
+        margin-bottom: 12px;      
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #646464;
+    }
+    &__descr { 
+        margin-bottom: 19px;      
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #0d0d0d;
+    }
+}
